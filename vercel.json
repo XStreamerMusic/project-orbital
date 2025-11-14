@@ -1,0 +1,25 @@
+{
+
+    "builds": [{
+
+        "src": "orbital/wsgi.py",
+
+        "use": "@vercel/python",
+
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.x" }
+
+    }],
+
+    "routes": [
+
+        {
+
+            "src": "/(.*)",
+
+            "dest": "orbital/wsgi.py"
+
+        }
+
+    ]
+
+}
